@@ -12,7 +12,9 @@ namespace TextEditer
 {
     public partial class calculator : Form
     {
-        int fizz;
+        int calflg = 0;
+        double sum, num1, num2;
+        bool DP = false;
 
         public calculator()
         {
@@ -155,6 +157,77 @@ namespace TextEditer
         {
             CalculatorView.Text = "0";
             PreviousValue.Text = "0";
+            DP = false;
+        }
+
+        private void Bsub_Click(object sender, EventArgs e)
+        {
+            if (CalculatorView.Text == "0")
+            {
+
+            }
+            else
+            {
+                PreviousValue.Text = CalculatorView.Text;
+                CalculatorView.Text = "0";
+                calflg = 2;
+            }
+        }
+
+        private void Bmul_Click(object sender, EventArgs e)
+        {
+            if (CalculatorView.Text == "0")
+            {
+
+            }
+            else
+            {
+                PreviousValue.Text = CalculatorView.Text;
+                CalculatorView.Text = "0";
+                calflg = 3;
+            }
+        }
+
+        private void Bdiv_Click(object sender, EventArgs e)
+        {
+            if (CalculatorView.Text == "0")
+            {
+
+            }
+            else
+            {
+                PreviousValue.Text = CalculatorView.Text;
+                CalculatorView.Text = "0";
+                calflg = 4;
+            }
+        }
+
+        private void Brem_Click(object sender, EventArgs e)
+        {
+            if (CalculatorView.Text == "0")
+            {
+
+            }
+            else
+            {
+                PreviousValue.Text = CalculatorView.Text;
+                CalculatorView.Text = "0";
+                calflg = 5;
+            }
+        }
+
+        private void DecimalPoint_Click(object sender, EventArgs e)
+        {
+            if(DP == false)
+            {
+                CalculatorView.Text += ".";
+                DP = true;
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void Badd_Click(object sender, EventArgs e)
@@ -167,7 +240,60 @@ namespace TextEditer
             {
                 PreviousValue.Text = CalculatorView.Text;
                 CalculatorView.Text = "0";
+                calflg = 1;
             }
+        }
+
+        private void Enter_Click(object sender, EventArgs e)
+        {
+            if(calflg == 1)
+            {
+                num1 = double.Parse(PreviousValue.Text);
+                num2 = double.Parse(CalculatorView.Text);
+                sum = num1 + num2;
+                PreviousValue.Text = "0";
+                CalculatorView.Text = Convert.ToString(sum);
+                calflg = 0;
+            }
+            else if(calflg == 2)
+            {
+                num1 = double.Parse(PreviousValue.Text);
+                num2 = double.Parse(CalculatorView.Text);
+                sum = num1 - num2;
+                PreviousValue.Text = "0";
+                CalculatorView.Text = Convert.ToString(sum);
+                calflg = 0;
+            }
+            else if(calflg == 3)
+            {
+                num1 = double.Parse(PreviousValue.Text);
+                num2 = double.Parse(CalculatorView.Text);
+                sum = num1 * num2;
+                PreviousValue.Text = "0";
+                CalculatorView.Text = Convert.ToString(sum);
+                calflg = 0;
+            }
+            else if(calflg == 4)
+            {
+                num1 = double.Parse(PreviousValue.Text);
+                num2 = double.Parse(CalculatorView.Text);
+                sum = num1 / num2;
+                PreviousValue.Text = "0";
+                CalculatorView.Text = Convert.ToString(sum);
+                calflg = 0;
+            }
+            else if(calflg == 5)
+            {
+                num1 = double.Parse(PreviousValue.Text);
+                num2 = double.Parse(CalculatorView.Text);
+                sum = num1 % num2;
+                PreviousValue.Text = "0";
+                CalculatorView.Text = Convert.ToString(sum);
+                calflg = 0;
+            }
+
+            DP = false;
+
         }
     }
 }

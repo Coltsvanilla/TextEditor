@@ -176,6 +176,7 @@
             this.DecimalPoint.TabIndex = 12;
             this.DecimalPoint.Text = ".";
             this.DecimalPoint.UseVisualStyleBackColor = true;
+            this.DecimalPoint.Click += new System.EventHandler(this.DecimalPoint_Click);
             // 
             // Enter
             // 
@@ -185,6 +186,7 @@
             this.Enter.TabIndex = 13;
             this.Enter.Text = "=";
             this.Enter.UseVisualStyleBackColor = true;
+            this.Enter.Click += new System.EventHandler(this.Enter_Click);
             // 
             // badd
             // 
@@ -224,6 +226,7 @@
             this.bdiv.TabIndex = 17;
             this.bdiv.Text = "/";
             this.bdiv.UseVisualStyleBackColor = true;
+            this.bdiv.Click += new System.EventHandler(this.Bdiv_Click);
             // 
             // bmul
             // 
@@ -233,6 +236,7 @@
             this.bmul.TabIndex = 18;
             this.bmul.Text = "*";
             this.bmul.UseVisualStyleBackColor = true;
+            this.bmul.Click += new System.EventHandler(this.Bmul_Click);
             // 
             // bsub
             // 
@@ -242,6 +246,7 @@
             this.bsub.TabIndex = 19;
             this.bsub.Text = "-";
             this.bsub.UseVisualStyleBackColor = true;
+            this.bsub.Click += new System.EventHandler(this.Bsub_Click);
             // 
             // brem
             // 
@@ -251,6 +256,7 @@
             this.brem.TabIndex = 20;
             this.brem.Text = "%";
             this.brem.UseVisualStyleBackColor = true;
+            this.brem.Click += new System.EventHandler(this.Brem_Click);
             // 
             // calculator
             // 
