@@ -124,8 +124,9 @@ namespace TextEditer
             // デジタル時計ToolStripMenuItem
             // 
             this.デジタル時計ToolStripMenuItem.Name = "デジタル時計ToolStripMenuItem";
-            this.デジタル時計ToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
+            this.デジタル時計ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.デジタル時計ToolStripMenuItem.Text = "デジタル時計";
+            this.デジタル時計ToolStripMenuItem.Click += new System.EventHandler(this.デジタル時計ToolStripMenuItem_Click);
             // 
             // TextEditor
             // 

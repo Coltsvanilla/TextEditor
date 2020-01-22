@@ -18,6 +18,7 @@ namespace TextEditer
             InitializeComponent();
         }
 
+        // テキストを開く処理
         private void 開くToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -33,7 +34,7 @@ namespace TextEditer
             }
 
         }
-
+        // テキストを保存する処理
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();
@@ -47,7 +48,7 @@ namespace TextEditer
             {
             }
         }
-
+        // ツールを終了する処理
         private void 終了ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("マルチツールを終了いたします", "終了", MessageBoxButtons.YesNo);
@@ -58,6 +59,16 @@ namespace TextEditer
             else
             {
             }
+        }
+        // デジタル時計を表示する処理
+        private void デジタル時計ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //DigitalClockクラスのインスタンスを作成する
+            DigitalClock dc = new DigitalClock();
+
+            dc.ShowDialog(this);
+
+            dc.Dispose();
         }
     }
 }
