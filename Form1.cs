@@ -57,7 +57,6 @@ namespace TextEditer
             }
             else
             {
-
             }
         }
     }
