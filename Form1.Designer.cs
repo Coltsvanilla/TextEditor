@@ -118,8 +118,9 @@ namespace TextEditer
             // 電卓ToolStripMenuItem
             // 
             this.電卓ToolStripMenuItem.Name = "電卓ToolStripMenuItem";
-            this.電卓ToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
+            this.電卓ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.電卓ToolStripMenuItem.Text = "電卓";
+            this.電卓ToolStripMenuItem.Click += new System.EventHandler(this.電卓ToolStripMenuItem_Click);
             // 
             // デジタル時計ToolStripMenuItem
             // 

@@ -44,7 +44,6 @@
             this.TimerView.Name = "TimerView";
             this.TimerView.Size = new System.Drawing.Size(349, 84);
             this.TimerView.TabIndex = 0;
-            this.TimerView.Text = "label1";
             // 
             // DigitalClock
             // 
@@ -52,7 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 111);
             this.Controls.Add(this.TimerView);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DigitalClock";
             this.Text = "DigitalClock";
             this.Load += new System.EventHandler(this.DigitalClock_Load);

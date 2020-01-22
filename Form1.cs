@@ -66,9 +66,16 @@ namespace TextEditer
             //DigitalClockクラスのインスタンスを作成する
             DigitalClock dc = new DigitalClock();
 
-            dc.ShowDialog(this);
+            dc.Show(this);
 
-            dc.Dispose();
+            //dc.Dispose();
+        }
+
+        private void 電卓ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            calculator cl = new calculator();
+            cl.Show(this);
+            //cl.Dispose();
         }
     }
 }
