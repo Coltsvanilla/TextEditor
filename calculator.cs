@@ -166,7 +166,7 @@ namespace TextEditer
             else
             {
                 PreviousValue.Text = CalculatorView.Text;
-                CalculatorView.Text = 0;
+                CalculatorView.Text = "0";
             }
         }
     }
